@@ -15,7 +15,6 @@ class Quiz {
 
         init {
             addQuestions()
-            questions.shuffle()
             score = 0;
         }
 
@@ -27,6 +26,10 @@ class Quiz {
             questions.add(Question( "Qual é a menor unidade viva?", "Célula", "Proteina", "Aminoácidos", "RNA", "Célula"))
             questions.add(Question( "Água e óleo não se misturam pois:", "ambas são apolares", "ambas são polares", "água é polar e óleo é apolar", "essas substâncias se odeiam", "água é polar e óleo é apolar"))
             questions.add(Question( "Qual dessas não é uma linguagem de programação?", "HTML", "PHP", "Javascript", "Java", "HTML"))
+        }
+        
+        fun shuffleQuestions() {
+            questions.shuffle()
         }
 
         fun checkOption(selectedOption: String, question: Question, context: Context) {
